@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="TestRunner-firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="practise.CreateOrgTestNg">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="logoutTheApp"/>
+          <include name="Demo"/>
+          <include name="closeBrowser"/>
+          <include name="dbConnection"/>
+          <include name="loginToApp"/>
+          <include name="createOrgTestNG"/>
+          <include name="closeDbConnection"/>
+        </methods>
+      </class> <!-- practise.CreateOrgTestNg -->
+      <class name="practise.CreateContactTestNg">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="logoutTheApp"/>
+          <include name="closeBrowser"/>
+          <include name="dbConnection"/>
+          <include name="loginToApp"/>
+          <include name="CreateContect"/>
+          <include name="closeDbConnection"/>
+        </methods>
+      </class> <!-- practise.CreateContactTestNg -->
+    </classes>
+  </test> <!-- TestRunner-firefox(failed) -->
+  <test thread-count="2" parallel="tests" name="TestRunner-chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="practise.CreateContactTestNg">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="logoutTheApp"/>
+          <include name="closeBrowser"/>
+          <include name="dbConnection"/>
+          <include name="loginToApp"/>
+          <include name="CreateContect"/>
+          <include name="closeDbConnection"/>
+        </methods>
+      </class> <!-- practise.CreateContactTestNg -->
+    </classes>
+  </test> <!-- TestRunner-chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
